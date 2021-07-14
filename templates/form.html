@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block form%}
+<div style="background-image: url(./static/images/aerobic_exercise_benefits.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% auto;">
+    <div class="container">
+        <a href="/"><button class="btn btn-primary btn-lg float-right mt-3">Main</button></a><br>
+    </div>
+    <div class="container col-xs-5 col-md-4 mt-5" style="opacity: 0.8;">
+        <div class="card">
+            <div class="card-header">
+                <h3>Data Taking For Predection</h3>
+            </div>
+            <div class="card-body">
+                <form action="/predict" method="POST">
+                    <div class="form-group">
+                        <label for="User_ID"><b>User_ID</b></label>
+                        <input type="number" name="User_ID" placeholder="Enter User_ID" class="form-control"  min="10001159" max="19999647" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Age"><b>Age</b></label><br>
+                        <input type="number" name="Age" placeholder="Enter Age" class="form-control" min="20" max="79" required>
+                    </div>
+                  
+	   
+                    <div class="form-group">
+                        <label for="Height"><b>Height</b></label><br>
+                        <input type="number" name="Height" placeholder="Enter Height value" class="form-control" min="123" max="222" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Weight"><b>Weight</b></label><br>
+                        <input type="number" name="Weight" placeholder="Enter Weight value" class="form-control" min="36" max="132" required>
+                    </div>
+                   
+          
+                    <div class="form-group">
+                        <label for="Duration"><b>Duration</b></label><br>
+                        <input type="number" name="Duration" placeholder="Enter Duration value" class="form-control" min="1" max="30" required>
+                    </div>
+
+                      <div class="form-group">
+                        <label for="Heart_Rate"><b>Heart_Rate</b></label><br>
+                        <input type="number" name="Heart_Rate" placeholder="Enter Heart_Rate value" step="0.1" min="67" max="128" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Body_Temp"><b>Body_Temp</b></label><br>
+                        <input type="number" name="Body_Temp" placeholder="Enter Body_Temp value" step="0.1" min="37.1" max="47.5" class="form-control" required>
+                    </div>
+
+	   
+                  <div class="form-group">
+                        <label for="Gender"><b>Gender</b></label> <br>
+                        <input type="radio" required name="Gender" value="0" required><label for="male">&nbsp;Male&nbsp;</label>
+                        <input type="radio" required name="Gender" value="1" ><label for="female">&nbsp;Female&nbsp;</label>
+                    </div>
+
+ 
+                    
+                    <div class="container">
+                        <button class="btn btn-success btn-lg" type="submit">Submit</button>
+                        <button class="btn btn-warning btn-lg float-right" type="reset">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+  </div>
+{% endblock%}
+
