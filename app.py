@@ -19,6 +19,9 @@ def predict():
    
    User_ID=request.form['User_ID']
    values.append(User_ID)
+
+   Gender=request.form['Gender']   
+   values.append(Gender)
    
    Age=request.form['Age']
    values.append(Age)
@@ -38,21 +41,18 @@ def predict():
    Body_Temp=request.form['Body_Temp']
    values.append(Body_Temp)
 
-   Gender=request.form['Gender']
-   values.append(Gender)
+   
 
    final_values=[np.array(values)]
    print(final_values)
    
    result= model.predict(final_values)
 
-   output= result[0]
-   print(output)
+   output= str(result[0])
+  
    
-   if output == 0:
-      return {'message': User_ID + 'does not burned Calories'}
-   else:
-      return {'message':User_ID + ' burned Calories'}
+
+   return {'message':User_ID + ' burned Calories :' + output}
   
 
 if __name__ == '__main__':
