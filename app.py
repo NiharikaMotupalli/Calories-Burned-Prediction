@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
 
-from flask import Flask, redirect, url_for,jsonify, request,render_template
+from flask import Flask,request,render_template
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 

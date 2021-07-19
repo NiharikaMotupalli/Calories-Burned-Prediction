@@ -4,14 +4,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </div>
 <div class="text-center">
-<h1 style="color:#A0522D;">CALORIES BURNED PREDICTION</h1>
+<h2 style="color:#A0522D;">CALORIES BURNED PREDICTION</h2>
 </div>
     <div class="container" >
         <a href="/ff"><button class="btn btn-primary btn-lg float-right mt-2">Form</button></a>
         <a href="/"><button class="btn btn-primary btn-lg float-left mt-3">Main</button></a><br>
       </div><br><br><br>
-    <div class="container  col-md-3" style="opacity: 0.8;">
-        <h1>Hello {{User_ID}}!</h1><br>
+    <div class="container  col-md-3" style="opacity:0.8;">
+        <h2>Hello {{User_ID}}!</h2><br>
         <div class="card">
             <div class="card-header">
                 <h2>Your Result Card</h2>
@@ -51,7 +51,7 @@
                 <!---<h2 class="text-danger">Final Result : {{Calories}}</h2>--->
               	{% if  Calories %}
                   <script>
-                         document.getElementById("safe").innerHTML = "You burned Calories : {{Calories}}";
+                   document.getElementById("safe").innerHTML ="Calories Burned={{Calories}}";
                    		   //alert("You  burned Calories")   
                     </script>
                 	 {% endif %}
