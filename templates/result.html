@@ -1,11 +1,11 @@
 {%extends 'base.html'%}
 {% block result %}
-<div style="background-image: url(./static/images/aerobic_exercise_benefits.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
-    <div class="container" style="height: 3px;">
+<div style="background-color : rgb(201,76,76,0.3); padding-bottom:200px;">
+    <div class="container" >
         <a href="/ff"><button class="btn btn-primary btn-lg float-right mt-2">Form</button></a>
         <a href="/"><button class="btn btn-primary btn-lg float-left mt-3">Main</button></a><br>
-    </div><br><br><br>
-    <div class="container col-md-3" style="opacity: 0.9;">
+      </div><br><br><br>
+    <div class="container  col-md-3" style="opacity: 0.8;">
         <h1>Hello {{User_ID}}!</h1><br>
         <div class="card">
             <div class="card-header">
@@ -41,27 +41,17 @@
                   <td>Body_Temp : </td>
                   <td>{{Body_Temp}}</td>
                 </tr>
-                
-               
               </table>
-                <p id="danger" style="font-size: 23px; color: red;"></p>
-                <p id="safe" style="font-size: 23px; color: Green;"></p>
-                <!---<h2 class="text-danger">Final Result : {{rrr}}</h2>--->
-              	{% if  rrr ==0 %}
-                  	<script>
-                         document.getElementById("safe").innerHTML = "You does not burned Calories";
-                   		   //alert("You does not burned Calories")
+               <p id="safe" style="font-size:23px; color:green; "></p>
+                <!---<h2 class="text-danger">Final Result : {{Calories}}</h2>--->
+              	{% if  Calories %}
+                  <script>
+                         document.getElementById("safe").innerHTML = "You burned Calories : {{Calories}}";
+                   		   //alert("You  burned Calories")   
                     </script>
-                	{% endif %}
-
-                	{% if  rrr ==1 %}
-                  	<script>
-                        document.getElementById("danger").innerHTML = "You Burned Calories"
-              		      //alert("You burned Calories")
-                    </script>
-                	{% endif %}
-            </div>
-        </div>
-    </div>
+                	 {% endif %}
+ </div>
+</div>
+</div>
 </div>
  {%endblock%}
