@@ -51,9 +51,6 @@ def predict():
    output= str(result[0])
   
    return render_template('result.html',User_ID=User_ID,Gender=Gender,Age=Age,Height=Height,Weight=Weight,Duration=Duration,Heart_Rate=Heart_Rate,Body_Temp=Body_Temp,Calories=output)
-
-
- #return {'message':User_ID + ' burned Calories :' + output}
   
 
 if __name__ == '__main__':
