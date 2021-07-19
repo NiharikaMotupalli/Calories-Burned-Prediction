@@ -3,7 +3,7 @@ import pickle
 
 from flask import Flask,request,render_template
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('model/model.pkl', 'rb'))
 
 @app.route('/')
 def index():
