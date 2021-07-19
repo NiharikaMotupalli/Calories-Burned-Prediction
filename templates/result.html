@@ -1,20 +1,17 @@
 {%extends 'base.html'%}
 {% block result %}
-<div>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</div>
 <div class="text-center">
-<h2 style="color:#A0522D;">CALORIES BURNED PREDICTION</h2>
+<h1 style="color:#A0522D; font-size:3vw;">CALORIES BURNED PREDICTION</h1>
 </div>
     <div class="container" >
         <a href="/ff"><button class="btn btn-primary btn-lg float-right mt-2">Form</button></a>
         <a href="/"><button class="btn btn-primary btn-lg float-left mt-3">Main</button></a><br>
       </div><br><br><br>
     <div class="container  col-md-3" style="opacity:0.8;">
-        <h2>Hello {{User_ID}}!</h2><br>
+        <h2 style ="font-size:3vw;">Hello {{User_ID}}!</h2><br>
         <div class="card">
             <div class="card-header">
-                <h2>Your Result Card</h2>
+                <h2 style=font-size:3vw;>Your Result Card</h2>
             </div>
             <div class="card-body">
               <table style="width:100%">
