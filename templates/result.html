@@ -24,10 +24,6 @@
                   <td>{{Age}}</td>
                 </tr>
                 <tr>
-                  <td>Height : </td>
-                  <td>{{Height}}</td>
-                </tr>
-                <tr>
                   <td>Weight : </td>
                   <td>{{Weight}}</td>
                 </tr>
@@ -39,16 +35,13 @@
                   <td>Heart_Rate : </td>
                   <td>{{Heart_Rate}}</td>
                 </tr>
-                <tr>
-                  <td>Body_Temp : </td>
-                  <td>{{Body_Temp}}</td>
-                </tr>
+             
               </table>
                <p id="safe" style="font-size:23px; color:green; "></p>
                 <!---<h2 class="text-danger">Final Result : {{Calories}}</h2>--->
               	{% if  Calories %}
                   <script>
-                   document.getElementById("safe").innerHTML ="Calories Burned={{Calories}}";
+                   document.getElementById("safe").innerHTML ="Calories Burned:{{Calories}}";
                    		   //alert("You  burned Calories")   
                     </script>
                 	 {% endif %}
