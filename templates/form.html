@@ -8,9 +8,9 @@
         <a href="/"><button class="btn btn-primary btn-lg float-right mt-3">Main</button></a><br>
     </div>
     <div class="container col-xs-5 col-md-4 mt-5" style="opacity: 0.8;">
-        <div class="card" style="font-size:3vw;">
+        <div class="card" >
             <div class="card-header">
-                <h3 style="font-size:3vw;">Data Taking For Predection</h3>
+                <h3 style ="font-size:2vw;">Data Taking For Predection</h3>
             </div>
             <div class="card-body">
                 <form action="/predict" method="POST">
@@ -41,8 +41,6 @@
                         <label for="Weight"><b>Weight</b></label><br>
                         <input type="number" name="Weight" placeholder="Enter Weight value" class="form-control" min="36" max="132" required>
                     </div>
-
-               
           
                     <div class="form-group" >
                         <label for="Duration"><b>Duration</b></label><br>
@@ -58,10 +56,8 @@
                         <label for="Body_Temp"><b>Body_Temp</b></label><br>
                         <input type="number" name="Body_Temp" placeholder="Enter Body_Temp value" step="0.1" min="37.1" max="47.5" class="form-control" required>
                     </div>
-
-	  
                     
-                    <div class="container" style="font-size:3vw;">
+                    <div class="container">
                         <button class="btn btn-success btn-lg" type="submit">Submit</button>
                         <button class="btn btn-warning btn-lg float-right" type="reset">Clear</button>
                     </div>
