@@ -25,7 +25,7 @@ def predict():
    
    Age=request.form['Age']
    values.append(Age)
-
+   
    Weight=request.form['Weight']
    values.append(Weight)
 

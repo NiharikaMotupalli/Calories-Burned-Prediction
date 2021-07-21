@@ -47,7 +47,7 @@ calories = pd.read_csv('D:/projects/IV-II (Calories burned prediction - ML)/Data
 exercise = pd.read_csv('D:/projects/IV-II (Calories burned prediction - ML)/DatasetExcel files/exercise.csv')
 #exercise.head()
 dataset = pd.merge(exercise, calories, on = 'User_ID')
-dataset.head()
+dataset.head
 dataset.drop(['Height'],axis=1,inplace=True)
 dataset.drop(['Body_Temp'],axis=1,inplace=True)
 #dataset.info()
