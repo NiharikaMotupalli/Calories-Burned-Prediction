@@ -10,9 +10,8 @@ def remove_outlier(dataset):
     Q1 = dataset.quantile(0.25)
     Q3 = dataset.quantile(0.75)
     IQR = Q3 - Q1
-    print(IQR)
     dataset=dataset[~((dataset<(Q1 - 1.5 * IQR)) | (dataset > (Q3 + 1.5 * IQR))).any(axis=1)]
-    print(dataset) 
+    
     
 #Smote function
 def smote_func(dataset):
@@ -34,12 +33,10 @@ def DTC(dataset,smote):
     DTC_obj.fit(x_train,y_train)
     #Predict the outcome
     y_predict_DTC=DTC_obj.predict(x_test)
-    print(classification_report(y_test,y_predict_DTC))
-    print("Accuracy percentage DTC:"+"{:.2f}".format(accuracy_score(y_test,y_predict_DTC)*100))
     b=accuracy_score(y_test,y_predict_DTC)
     #Confusion matrix
     cm = confusion_matrix(y_test, y_predict_DTC)
-    print(cm)
+    
     return b
 
 calories = pd.read_csv('D:/projects/IV-II (Calories burned prediction - ML)/DatasetExcel files/calories.csv')
@@ -47,14 +44,12 @@ calories = pd.read_csv('D:/projects/IV-II (Calories burned prediction - ML)/Data
 exercise = pd.read_csv('D:/projects/IV-II (Calories burned prediction - ML)/DatasetExcel files/exercise.csv')
 #exercise.head()
 dataset = pd.merge(exercise, calories, on = 'User_ID')
-dataset.head
+dataset.head()
 dataset.drop(['Height'],axis=1,inplace=True)
 dataset.drop(['Body_Temp'],axis=1,inplace=True)
 #dataset.info()
 dataset.isnull()
 dataset.hist()
-print(dataset.isnull().sum())
-
 
 dataset.describe()
 
