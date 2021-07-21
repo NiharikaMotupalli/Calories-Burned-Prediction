@@ -36,7 +36,7 @@ def predict():
    values.append(Heart_Rate)
 
    final_values=[np.array(values)]
-   print(final_values)
+
    
    result= model.predict(final_values)
 
