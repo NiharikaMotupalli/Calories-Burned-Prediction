@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% block form%}
-<div style="background-image: url(./static/images/aerobic_exercise_benefits.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+<div style="background-image: url(./static/images/aerobic_exercise_benefits.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; ">
 <div class="text-center">
 <h1 style="color:#FF7F50; font-size:3vw;">CALORIES BURNED PREDICTION</h1>
 </div>   
- <div class="container">
-        <a href="/"><button class="btn btn-primary btn-lg float-right mt-3">Main</button></a><br>
-    </div>
+   <div class="container" >
+        <a href="/"><button class="btn btn-primary btn-sm float-right mt-3">Main</button></a><br>
+      </div><br>
     <div class="container col-xs-5 col-md-4 mt-5" style="opacity: 0.8;">
         <div class="card" >
             <div class="card-body">
                 <form action="/predict" method="POST">
-                    <div class="form-group" style ="font-size:1vw;">
+                    <div class="form-group"style ="font-size:1vw;" >
                         <label for="User_ID"><b>User_ID</b></label>
                         <input type="number" name="User_ID" placeholder="Enter User_ID" class="form-control"  min="10001159" max="19999647" required>
                     </div>
-                  <div class="form-group"  style ="font-size:1vw;">
+                  <div class="form-group" style ="font-size:1vw;">
                         <label for="Gender"><b>Gender</b></label> <br>
                         <input type="radio" required name="Gender" value="0" required><label for="male">&nbsp;Male&nbsp;</label>
                         <input type="radio" required name="Gender" value="1" ><label for="female">&nbsp;Female&nbsp;</label>
@@ -39,9 +39,9 @@
                         <label for="Heart_Rate"><b>Heart_Rate</b></label><br>
                         <input type="number" name="Heart_Rate" placeholder="Enter Heart_Rate value" step="0.1" min="67" max="128" class="form-control" required>
                     </div>
-                    <div class="container" style ="font-size:1vw;">
-                        <button class="btn btn-success btn-sm"style ="font-size:1vw;" type="submit">Submit</button>
-                        <button class="btn btn-warning btn-sm float-right" style ="font-size:1vw;"type="reset">Clear</button>
+                    <div class="container">
+                        <button class="btn btn-success btn-sm" style ="font-size:1vw;"type="submit">Submit</button>
+                        <button class="btn btn-warning btn-sm float-right"style ="font-size:1vw;" type="reset">Clear</button>
                     </div>
                 </form>
             </div>
