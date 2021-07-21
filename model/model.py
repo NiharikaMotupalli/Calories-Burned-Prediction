@@ -25,7 +25,7 @@ def smote_func(dataset):
     
 #Algorithms.
 #DecisionTreeClassifier  
-'''def DTC(dataset,smote):
+def DTC(dataset,smote):
     DTC_obj=DecisionTreeClassifier()
     if smote=='True':
         x_train,x_test,y_train,y_test=smote_func(dataset)
@@ -40,7 +40,7 @@ def smote_func(dataset):
     #Confusion matrix
     cm = confusion_matrix(y_test, y_predict_DTC)
     print(cm)
-    return b'''
+    return b
 
 calories = pd.read_csv('D:/projects/IV-II (Calories burned prediction - ML)/DatasetExcel files/calories.csv')
 #calories.head()

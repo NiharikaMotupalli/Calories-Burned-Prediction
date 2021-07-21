@@ -1,52 +1,49 @@
 {% extends 'base.html' %}
 {% block form%}
-<div style="background-image: url(./static/images/aerobic_exercise_benefits.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; ">
-<div class="text-center">
-<h1 style="color:#FF7F50; font-size:3vw;">CALORIES BURNED PREDICTION</h1>
-</div>   
-   <div class="container" >
-        <a href="/"><button class="btn btn-primary btn-sm float-right mt-3">Main</button></a><br>
-      </div><br>
+<div style="background-image: url(./static/images/aerobic_exercise_benefits.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; height:50vw;">
+<div class="text-left">
+<h2 style="color:#FF7F50;font-size:15px; padding-left:20px;">CALORIES BURNED PREDICTION</h2>
+</div>
     <div class="container col-xs-5 col-md-4 mt-5" style="opacity: 0.8;">
         <div class="card" >
             <div class="card-body">
                 <form action="/predict" method="POST">
-                    <div class="form-group"style ="font-size:1vw;" >
-                        <label for="User_ID"><b>User_ID</b></label>
-                        <input type="number" name="User_ID" placeholder="Enter User_ID" class="form-control"  min="10001159" max="19999647" required>
+                    <div class="form-group" >
+                        <label for="User_ID" style="font-size:13px;"><b>User_ID</b></label>
+                        <input type="number" name="User_ID" placeholder="Enter User_ID" class="form-control" style="height:25px;font-size:13px;" min="10001159" max="19999647" required>
                     </div>
-                  <div class="form-group" style ="font-size:1vw;">
-                        <label for="Gender"><b>Gender</b></label> <br>
-                        <input type="radio" required name="Gender" value="0" required><label for="male">&nbsp;Male&nbsp;</label>
-                        <input type="radio" required name="Gender" value="1" ><label for="female">&nbsp;Female&nbsp;</label>
+                  <div class="form-group">
+                        <label for="Gender"  style="font-size:13px;"><b>Gender</b></label> <br>
+                        <input type="radio" required name="Gender" value="0" required><label for="male" style="font-size:13px;">&nbsp;Male&nbsp;</label>
+                        <input type="radio" required name="Gender" value="1" ><label for="female" style="font-size:13px;">&nbsp;Female&nbsp;</label>
                     </div>
-                    <div class="form-group" style ="font-size:1vw;">
-                        <label for="Age"><b>Age</b></label><br>
-                        <input type="number" name="Age" placeholder="Enter Age" class="form-control" min="20" max="79" required>
+                    <div class="form-group" >
+                        <label for="Age"  style="font-size:13px;"><b>Age</b></label><br>
+                        <input type="number" name="Age" placeholder="Enter Age" class="form-control" style="height:25px;font-size:13px;" min="20" max="79" required>
                     </div>
 
-                    <div class="form-group" style ="font-size:1vw;">
-                        <label for="Weight"><b>Weight</b></label><br>
-                        <input type="number" name="Weight" placeholder="Enter Weight value" class="form-control" min="36" max="132" required>
+                    <div class="form-group" >
+                        <label for="Weight"  style="font-size:13px;"><b>Weight</b></label><br>
+                        <input type="number" name="Weight" placeholder="Enter Weight value" class="form-control" style="height:25px;font-size:13px;" min="36" max="132" required>
                     </div>
           
-                    <div class="form-group" style ="font-size:1vw;">
-                        <label for="Duration"><b>Duration</b></label><br>
-                        <input type="number" name="Duration" placeholder="Enter Duration value" class="form-control" min="1" max="30" required>
+                    <div class="form-group" >
+                        <label for="Duration" style="font-size:13px;"><b>Duration</b></label><br>
+                        <input type="number" name="Duration" placeholder="Enter Duration value" class="form-control" style="height:25px;font-size:13px;" min="1" max="30" required>
                     </div>
 
-                      <div class="form-group" style ="font-size:1vw;">
-                        <label for="Heart_Rate"><b>Heart_Rate</b></label><br>
-                        <input type="number" name="Heart_Rate" placeholder="Enter Heart_Rate value" step="0.1" min="67" max="128" class="form-control" required>
+                      <div class="form-group" >
+                        <label for="Heart_Rate" style="font-size:13px;"><b>Heart_Rate</b></label><br>
+                        <input type="number" name="Heart_Rate" placeholder="Enter Heart_Rate value" step="0.1" style="height:25px;font-size:13px;" min="67" max="128" class="form-control" required>
                     </div>
                     <div class="container">
-                        <button class="btn btn-success btn-sm" style ="font-size:1vw;"type="submit">Submit</button>
-                        <button class="btn btn-warning btn-sm float-right"style ="font-size:1vw;" type="reset">Clear</button>
+                        <button class="btn btn-success btn-sm" style="font-size:10px;"  type="submit">Submit</button>
+                        <button class="btn btn-warning btn-sm float-right" style="font-size:10px;" type="reset">Clear</button>
                     </div>
                 </form>
             </div>
         </div>
       </div>
-  </div>
+<div>
 {% endblock%}
 
